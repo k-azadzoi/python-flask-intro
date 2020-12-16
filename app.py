@@ -31,7 +31,7 @@ def index():
             return 'There was an error adding your task'
 
     else:
-        tasks = Todo.query.order_by(Todo.data_created).all()
+        tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template('index.html', tasks=tasks)
 
 

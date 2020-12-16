@@ -19,7 +19,7 @@
                 Actions
             </th>
         </tr>
-        {% for task ins tasks %}
+        {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.date() }}</td>
@@ -31,10 +31,11 @@
             </tr>
         {% endfor %}
     </table>
-
-    <form action="/" method="POST">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Add Task">
-    </form>
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+    </div>
 </div>
 {% endblock %}
